@@ -1,13 +1,105 @@
+---
+const pageTitle = "Lola-Rose Gooch";
+
+const identity = {
+	country: "England",
+	city: "Norwich",
+	occupation: "Student"
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "PostgreSQL", "Java", "Python", "Maths", "Astro"];
+
+function getTodaysDate() {
+	var today = new Date();
+	var dd = String(today.getDate());
+	var mm = String(today.getMonth() + 1);
+	return dd + "/" + mm;
+};
+
+const birthday = "23/04";
+
+const education = [{
+						location:"University of East Anglia",
+						website:"https://www.uea.ac.uk/",
+						title:"Computing Sciences",
+						grades: [[false, "Pending"]]
+					},
+					{
+						location:"Thorpe St Andrew School & Sixth Form",
+						website:"https://tsa-edu.co.uk/",
+						title:"A-Level",
+						grades: [["Further Mathematics", "A*"],
+								["Mathematics", "A*"],
+								["Computer Science", "A"],
+								["Physics", "B"],
+								["EPQ", "A*"]]
+					},
+					{
+						location:"Thorpe St Andrew School & Sixth Form",
+						website:"https://tsa-edu.co.uk/",
+						title:"GCSE",
+						grades: [["Mathematics", "9"],
+								["Computer Science", "9"],
+								["Combined Science", "9 9"],
+								["Art & Design", "9"],
+								["Design & Technology", "9"],
+								["Geography", "9"],
+								["English Literature", "9"],
+								["English Language", "7"],
+								["Creative iMedia", "7"]]
+					}
+];
+---
+
+<!-- MY PLAN 
+. Make the website have a light mode, dark mode, system mode, and a separate time mode.
+  - The time mode changes the side to be in e.g sunrise/sunset, twilight, night, day, etc.
+. Add links to my social media platforms (linkedin, portfolio, github, etc)
+. Add image of myself
+. Format nicely
+. Make Lola's Birthday bit look nice
+-->
+
+
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Lola-Rose Gooch</title>
+		<title>{pageTitle}</title>
+		<style>
+			/* Add styling here */
+		</style>
 	</head>
 	<body>
-		<h1>Lola-Rose Gooch</h1>
-		<p>This is the beginning of my landing page.</p>
+		<h1>{pageTitle}</h1>
+		<h3>{identity.occupation}</h3>
+		<h4>{identity.city}, {identity.country}</h4>
+		{birthday === getTodaysDate() && <p>{getTodaysDate()}</p>}
+		<!-- Insert links to linkedin, github, portfolio, etc -->
+
+		<h2>About Me</h2>
+		<p>A highly organised, committed, adaptable {identity.occupation} who strives to achieve her best and improve while she does it. Undergoing an integrated masters in Computing Sciences until 2028.</p>
+		
+		<h2><a href="blog">My Blog!</a></h2>
+		<p>Interested in what I'm getting up to? Consider checking out my blog! I write about some of the things I'm working on, how I did it, and other things I have discovered.</p>
+
+		<h2>My Skills</h2>
+		<ul>
+			{skills.map((skill) => <li>{skill}</li>)}
+		</ul>
+		
+		<h2>Education</h2>
+		<ul>
+			{education.map((experience) => 
+					<div>
+						<h3><a href={experience.website}>{experience.location}</a></h3>
+						<h4>{experience.title}</h4>
+						<ul>
+							{experience.grades.map((grade) => grade[0] ? <li>{grade[0]} - {grade[1]}</li> : <li>{grade[1]}</li>)}
+						</ul>
+					</div>)}
+		</ul>
 	</body>
 </html>
