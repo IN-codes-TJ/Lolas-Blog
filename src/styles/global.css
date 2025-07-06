@@ -1,0 +1,36 @@
+body {
+	margin: 0 10vw;
+	background: rgb(212, 208, 192);
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	line-height: 120%;
+}
+
+h1 {
+	font-size: 8vw;
+	text-align: center;
+	margin: auto;
+	padding: 1vw;
+	font-family: 'Times New Roman', serif;
+	line-height: 110%;
+}
+
+h2 {
+	font-size: 4vw;
+	font-family: 'Times New Roman', serif;
+}
+
+h3 {
+	font-weight: normal;
+	font-size: 1.4vw;
+	line-height: 0.1em;
+}
+
+h4 {
+	font-size: 1.1vw;
+	font-weight: normal;
+	line-height: 0.1em;
+}
+
+a:visited {
+	color: black;
+}
