@@ -1,8 +1,11 @@
 body {
-	margin: 0 10vw;
-	background: rgb(212, 208, 192);
+	background: rgb(4, 7, 4);	
 	font-family: Georgia, 'Times New Roman', Times, serif;
 	line-height: 120%;
+	font-size: 1.3vw;
+	color: rgb(225, 222, 213);
+	margin: 0;
+	overflow-x: hidden;
 }
 
 h1 {
@@ -31,6 +34,6 @@ h4 {
 	line-height: 0.1em;
 }
 
-a:visited {
+a:visited, a {
 	color: black;
 }

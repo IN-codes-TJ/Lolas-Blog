@@ -1,6 +1,6 @@
 ---
+import { imageConfig } from 'astro:assets';
 import '../styles/global.css';
-
 
 const pageTitle = "MEET LOLA";
 
@@ -11,8 +11,6 @@ const identity = {
 	city: "Norwich",
 	occupation: "Student"
 };
-
-const skills = ["HTML", "CSS", "JavaScript", "PostgreSQL", "Java", "Python", "Maths", "Astro"];
 
 function getTodaysDate() {
 	var today = new Date();
@@ -27,12 +25,18 @@ const education = [{
 						location:"University of East Anglia",
 						website:"https://www.uea.ac.uk/",
 						title:"Computing Sciences",
+						start: "2024",
+						end: "ongoing",
+						skills: ["HTML", "CSS", "JavaScript", "PostgreSQL", "Java", "Advanced Maths"],
 						grades: [[false, "Pending"]]
 					},
 					{
 						location:"Thorpe St Andrew School & Sixth Form",
 						website:"https://tsa-edu.co.uk/",
 						title:"A-Level",
+						start: "2022",
+						end: "2024",
+						skills: ["Python", "Maths"],
 						grades: [["Further Mathematics", "A*"],
 								["Mathematics", "A*"],
 								["Computer Science", "A"],
@@ -43,6 +47,9 @@ const education = [{
 						location:"Thorpe St Andrew School & Sixth Form",
 						website:"https://tsa-edu.co.uk/",
 						title:"GCSE",
+						start: "2017",
+						end: "2022",
+						skills: ["Python", "Maths"],
 						grades: [["Mathematics", "9"],
 								["Computer Science", "9"],
 								["Combined Science", "9 9"],
@@ -54,13 +61,23 @@ const education = [{
 								["Creative iMedia", "7"]]
 					}
 ];
+
+const skills = [];
+education.forEach((experience) => {
+	var skill = experience.skills;
+	skill.forEach((item) => {
+		if (skills.includes(item) === false) {
+			skills.push(item);
+		}
+	});
+});
+
 ---
 
 <!-- MY PLAN 
 . Make the website have a light mode, dark mode, system mode, and a separate time mode.
   - The time mode changes the side to be in e.g sunrise/sunset, twilight, night, day, etc.
 . Add links to my social media platforms (linkedin, portfolio, github, etc)
-. Add image of myself
 . Format nicely
 . Make Lola's Birthday bit look nice
 -->
@@ -75,7 +92,13 @@ const education = [{
 		<title>{pageTitle}</title>
 		<style>
 			#landing {
+				display: absolute;
+				z-index: 0;
+				position: fixed;
 				height: 100vh;
+				background: rgb(225, 222, 213);
+				padding: 0 10vw 8vw 10vw;
+				color: black;
 			}
 
 			#background {
@@ -108,9 +131,9 @@ const education = [{
 			#info-text {
 				grid-area: txt;
 				width: 100%;
-				background-color: rgba(212, 208, 192, 0.7);
+				background-color: rgba(225, 222, 213, 0.7);
 				border-radius: 0.4vw;
-				border: 0.4vw solid rgba(212, 208, 192, 0.2);
+				border: 0.4vw solid rgba(225, 222, 213, 0.2);
 				font-size: 1.2vw;
 			}
 
@@ -146,6 +169,95 @@ const education = [{
 				margin-top: 0;
 			}
 
+			.triangle-up {
+				border-left: 50vw solid transparent;
+				border-right: 50vw solid transparent;
+				border-bottom: 8vw solid rgb(7, 10, 7);
+				transform: translateY(100vh);
+			}
+
+			#content {
+				transform: translateY(100vh);
+				padding: 5vw 10vw;
+				background: rgb(7, 10, 7);
+			}
+
+			main > h2 {
+				padding-top: 10vh;
+			}
+
+			#skills {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				list-style: none;
+				padding: 0;
+				justify-content: left;
+			}
+
+			#skills li {
+				width: fit-content;
+				padding: 0.5vw 1vw;
+				margin: 0 2vw 4vw 0;
+				text-align: center;
+				background-color: rgb(32, 63, 32, 0.4);
+				color: rgb(78, 132, 78);
+				border: 0.15vw solid rgb(32, 63, 32);
+				border-radius: 0.5vw;
+				font-size: 1.5vw;
+			}
+
+			#education {
+				display: flex;
+				flex-direction: column;
+				padding: 0;
+			}
+
+			#education div {
+				position: relative;
+				background-color: rgb(10, 13, 10);
+				color: rgb(165, 172, 165);
+				border: 0.15vw solid rgb(25, 28, 25);
+				border-radius: 0.5vw;
+				margin: 2vw 0;
+				padding: 1vw 2vw;
+				width: fit-content;
+				min-width: 40%;
+			}
+
+			#education h3 a {
+				padding-right: 10vw;
+				color: rgb(225, 222, 213);
+				text-decoration: none;
+			}
+
+			#education ul {
+				list-style: none;
+				padding: 0;
+			}
+
+			#education li::marker {
+				font-size: 1.2vw;
+			}
+
+			#education p, #education li {
+				font-size: 1vw;
+			}
+
+			#education p {
+				position: absolute;
+				padding: 0 2vw;
+				right: 0;
+				top: 0;
+				font-size: 0.8vw;
+			}
+
+			#education ul {
+				padding: 0.5vw 0;
+				margin-top: 1vw;
+				width: fit-content;
+			}
+
 		</style>
 	</head>
 	<body>
@@ -167,7 +279,8 @@ const education = [{
 
 						<h3><a href="blog">MY BLOG</a></h3>
 						<p>Interested in what I'm getting up to? Consider checking out my blog! I write about some of the things I'm working on, how I did it, and other things I have discovered.</p>
-
+						<br>
+						
 					</div>
 					<div id="profile">
 						<img src={profileImg} alt="test">
@@ -178,23 +291,26 @@ const education = [{
 					<!-- Insert links to linkedin, github, portfolio, etc -->
 				</div>
 			</div>
-
-			<h2>MY SKILLS</h2>
-			<ul>
-				{skills.map((skill) => <li>{skill}</li>)}
-			</ul>
-			
-			<h2>EDUCATION</h2>
-			<ul>
-				{education.map((experience) => 
-						<div>
-							<h3><a href={experience.website}>{experience.location}</a></h3>
-							<h4>{experience.title}</h4>
-							<ul>
-								{experience.grades.map((grade) => grade[0] ? <li>{grade[0]} - {grade[1]}</li> : <li>{grade[1]}</li>)}
-							</ul>
-						</div>)}
-			</ul>
+			<div class="triangle-up"></div>
+			<div id="content">
+				<h2>MY SKILLS</h2>
+				<ul id="skills">
+					{skills.map((skill) => <li>{skill}</li>)}
+				</ul>
+				
+				<h2>EDUCATION</h2>
+				<ul id="education">
+					{education.map((experience) => 
+							<div>
+								<h3><a href={experience.website}>{experience.location}</a></h3>
+								<h4>{experience.title}</h4>
+								<ul>
+									{experience.grades.map((grade) => grade[0] ? <li>{grade[0]} - {grade[1]}</li> : <li>{grade[1]}</li>)}
+								</ul>
+								<p>{experience.start} - {experience.end}</p>
+							</div>)}
+				</ul>
+			</div>
 		</main>
 	</body>
 </html>
