@@ -80,6 +80,7 @@ education.forEach((experience) => {
 . Add links to my social media platforms (linkedin, portfolio, github, etc)
 . Format nicely
 . Make Lola's Birthday bit look nice
+. Mobile version
 -->
 
 
@@ -92,13 +93,13 @@ education.forEach((experience) => {
 		<title>{pageTitle}</title>
 		<style>
 			#landing {
-				display: absolute;
 				z-index: 0;
 				position: fixed;
 				height: 100vh;
 				background: rgb(225, 222, 213);
 				padding: 0 10vw 8vw 10vw;
 				color: black;
+				top: 0;
 			}
 
 			#background {
@@ -170,15 +171,16 @@ education.forEach((experience) => {
 			}
 
 			.triangle-up {
+				position: relative;
 				border-left: 50vw solid transparent;
 				border-right: 50vw solid transparent;
 				border-bottom: 8vw solid rgb(7, 10, 7);
-				transform: translateY(100vh);
+				margin-top: 100vh;
 			}
 
 			#content {
-				transform: translateY(100vh);
-				padding: 5vw 10vw;
+				position: relative;
+				padding: 5vw 10vw 1vw 10vw;
 				background: rgb(7, 10, 7);
 			}
 
@@ -214,7 +216,10 @@ education.forEach((experience) => {
 			}
 
 			#education div {
-				position: relative;
+				display: grid;
+				grid-template-areas: "location date"
+									 "title ."
+									 "grades grades";
 				background-color: rgb(10, 13, 10);
 				color: rgb(165, 172, 165);
 				border: 0.15vw solid rgb(25, 28, 25);
@@ -222,18 +227,25 @@ education.forEach((experience) => {
 				margin: 2vw 0;
 				padding: 1vw 2vw;
 				width: fit-content;
-				min-width: 40%;
+				min-width: 45%;
 			}
 
 			#education h3 a {
-				padding-right: 10vw;
 				color: rgb(225, 222, 213);
 				text-decoration: none;
+				grid-area: location; /* OR DO JUST H3 */
+			}
+
+			#education h4 {
+				grid-area: title;
 			}
 
 			#education ul {
 				list-style: none;
-				padding: 0;
+				grid-area: grades;
+				padding: 0.5vw 0;
+				margin-top: 1vw;
+				width: fit-content;
 			}
 
 			#education li::marker {
@@ -245,17 +257,17 @@ education.forEach((experience) => {
 			}
 
 			#education p {
-				position: absolute;
-				padding: 0 2vw;
-				right: 0;
-				top: 0;
+				padding: 0;
+				margin: auto;
+				margin-right: 0;
 				font-size: 0.8vw;
+				width: fit-content;
+				grid-area: date;
 			}
 
-			#education ul {
-				padding: 0.5vw 0;
-				margin-top: 1vw;
-				width: fit-content;
+			footer {
+				position: relative;
+				background: rgb(7, 10, 7);
 			}
 
 		</style>
@@ -312,5 +324,8 @@ education.forEach((experience) => {
 				</ul>
 			</div>
 		</main>
+		<footer>
+			<p>© Copyright Lola-Rose Gooch 2025. All Rights Reserved.</p>
+		</footer>
 	</body>
 </html>

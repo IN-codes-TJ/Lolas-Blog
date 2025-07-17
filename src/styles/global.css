@@ -37,3 +37,14 @@ h4 {
 a:visited, a {
 	color: black;
 }
+
+footer {
+	width: 100%;
+	font-size: 0.8vw;
+	margin: auto;
+	padding: 2vw;
+	bottom: 0;
+	color: white;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+}
