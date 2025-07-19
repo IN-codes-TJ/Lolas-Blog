@@ -189,6 +189,10 @@ footer {
     color: white;
 }
 
+footer a {
+	color: white;
+}
+
 footer a:visited {
 	color: white;
 }
