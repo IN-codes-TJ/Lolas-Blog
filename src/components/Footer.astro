@@ -1,0 +1,19 @@
+---
+const platforms = [{
+                        name: "Github",
+                        url: `https://github.com/IN-codes-TJ`,
+                        image: ""
+                    },
+                    {
+                        name: "LinkedIn",
+                        url: `https://www.linkedin.com/in/lola-rose-gooch-430176328/`,
+                        image: ""
+                    }
+];
+---
+
+<footer>
+    <p>Social Media:</p>
+    {platforms.map((platform) => <a href={platform.url}>{platform.name}</a>)}
+    <p>© Copyright Lola-Rose Gooch 2025. All Rights Reserved.</p>
+</footer>
