@@ -84,6 +84,7 @@
 #content {
 	position: relative;
 	border-top: 1vw solid rgb(7, 10, 7);
+	border-bottom: 1vw solid rgb(7, 10, 7);
 	padding: 5vw 10vw 1vw 10vw;
 	background: rgb(7, 10, 7);
     color: rgb(225, 222, 213);
