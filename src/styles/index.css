@@ -16,6 +16,8 @@
 						 "txt socials";
 	grid-gap: 0 4vw;
 	grid-template-columns: 3fr 2fr;
+	justify-items: center;
+	align-items: center;
 	background-image: url("/public/assets/blog_bg.png");
 	background-size:cover;
 	border-radius: 1vw;
@@ -35,6 +37,7 @@
 #info-text {
 	grid-area: txt;
 	width: 100%;
+	height: 100%;
 	background-color: rgba(225, 222, 213, 0.7);
 	border-radius: 0.4vw;
 	border: 0.4vw solid rgba(225, 222, 213, 0.2);
@@ -49,11 +52,15 @@
 	padding-top: 1vw;
 	padding-bottom: 1vw;
 }
+
+#mobile-info {
+	display: none;
+}
 			
 #profile {
 	grid-area: profile;
 	display: flex;
-	width: 90%;
+	width: 70%;
 	border: 0.4vw solid rgba(212, 208, 192, 0.2);
 	border-radius: 20vw;
 	margin: auto;
@@ -195,4 +202,97 @@ footer a {
 
 footer a:visited {
 	color: white;
+}
+
+@media screen and (max-width: 636px) {
+	#info-text h2, #info-text h3, #info-text h4 {
+		display: none;
+	}
+
+	#profile {
+		width: 32vw;
+		height: 34vw;
+		margin: 2vw auto;
+	}
+
+	#info-content {
+		display: grid;
+		grid-template-areas: "profile subtitle"
+							 "profile socials"
+							 "txt txt";
+		grid-gap: 0;
+		height: calc(100% - 34vw);
+	}
+
+	#info-content h2 {
+		font-size: 4.5vw;
+		line-height: 1em;
+		margin-top: 8vw;
+	}
+
+	#info-content h3 {
+		margin: 1vw auto;
+	}
+
+	#mobile-info {
+		grid-area: subtitle;
+		display: flex;
+		flex-direction: column;
+		color:rgb(225, 222, 213);
+		margin: 0 auto;
+		text-align: center;
+		height: fit-content;
+	}
+
+	#info-text {
+		margin: 0 2vw auto 2vw;
+		font-size: 2.5vw;
+		height: max-content;
+	}
+
+	#info-text p, #info-text h3 a {
+		padding: 0 4vw;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	#info-text h2, #info-text h3, #info-text h4 {
+		display: none;
+	}
+
+	#profile {
+		width: auto;
+		max-width: 55%;
+		min-height: fit-content;
+		margin: 2vw auto;
+	}
+
+	#info-content {
+		display: flex;
+		flex-direction: column;
+		height: calc(100% - 28vw);
+	}
+
+	#info-content h2 {
+		font-size: 5vw;
+		margin: 1vw auto;
+	}
+
+	#mobile-info {
+		display: flex;
+		flex-direction: column;
+		color:rgb(225, 222, 213);
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	#info-text {
+		margin-top: 2vw;
+		font-size: 3vw;
+		height: fit-content;
+	}
+
+	#info-text p, #info-text h3 a {
+		padding: 0 4vw;
+	}
 }

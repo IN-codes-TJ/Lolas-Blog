@@ -1,7 +1,7 @@
 body {
 	background: rgb(225, 222, 213);	
 	font-family: Georgia, 'Times New Roman', Times, serif;
-	line-height: 120%;
+	line-height: 1.5em;
 	font-size: 1.3vw;
 	color: rgb(4, 7, 4);
 	margin: 0;
@@ -68,4 +68,40 @@ footer a {
 
 footer a:visited {
 	color: rgb(7, 10, 7);
+}
+
+@media screen and (max-width: 636px) {
+	body {
+		font-size: 2.5vw;
+	}
+
+	h1 {
+		font-size: 10vw;
+	}
+
+	h3 {
+		font-size: 3vw;
+	}
+
+	h4 {
+		font-size: 2vw;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	body {
+		font-size: 3vw;
+	}
+
+	h1 {
+		font-size: 12vw;
+	}
+
+	h3 {
+		font-size: 3.5vw;
+	}
+
+	h4 {
+		font-size: 2.5vw;
+	}
 }
