@@ -101,16 +101,18 @@ education.forEach((experience) => {
 				<h1>{pageTitle}</h1>
 				
 				<div id="info-content">
-					<div id="profile">
-						<img src={profileImg} alt="Profile picture of Lola">
+					<div>
+						<div id="profile">
+							<img src={profileImg} alt="Profile picture of Lola">
+						</div>
+						<div id="mobile-info">
+							<h2>LOLA-ROSE GOOCH</h2>
+							<h3>{identity.occupation}</h3>
+							<h4>{identity.city}, {identity.country}</h4>
+							{birthday === getTodaysDate() && <p>{getTodaysDate()}</p>}
+						</div>
+						<Social />
 					</div>
-					<div id="mobile-info">
-						<h2>LOLA-ROSE GOOCH</h2>
-						<h3>{identity.occupation}</h3>
-						<h4>{identity.city}, {identity.country}</h4>
-						{birthday === getTodaysDate() && <p>{getTodaysDate()}</p>}
-					</div>
-					<Social />
 					<div id="info-text">
 						<h2>LOLA-ROSE GOOCH</h2>
 						<h3>{identity.occupation}</h3>

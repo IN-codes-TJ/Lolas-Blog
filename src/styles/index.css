@@ -23,6 +23,7 @@
 	border-radius: 1vw;
 	padding: 4vw;
 	height: calc(100% - 22vw);
+	width: 72vw;
 }
 
 #info-content h2 {
@@ -204,95 +205,93 @@ footer a:visited {
 	color: white;
 }
 
-@media screen and (max-width: 636px) {
-	#info-text h2, #info-text h3, #info-text h4 {
+@media screen and (max-width: 900px) {
+	#info-content {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		align-content: center;
+		overflow: hidden;
+	}
+
+	#info-content h4 {
+		margin: 1vw auto 4vw auto;
+	}
+
+	#info-text h2, #info-text h3:first-of-type, #info-text h4 {
 		display: none;
 	}
 
-	#profile {
-		width: 32vw;
-		height: 34vw;
-		margin: 2vw auto;
-	}
-
-	#info-content {
-		display: grid;
-		grid-template-areas: "profile subtitle"
-							 "profile socials"
-							 "txt txt";
-		grid-gap: 0;
-		height: calc(100% - 34vw);
-	}
-
-	#info-content h2 {
-		font-size: 4.5vw;
-		line-height: 1em;
-		margin-top: 8vw;
-	}
-
-	#info-content h3 {
-		margin: 1vw auto;
-	}
-
 	#mobile-info {
-		grid-area: subtitle;
 		display: flex;
 		flex-direction: column;
 		color:rgb(225, 222, 213);
 		margin: 0 auto;
 		text-align: center;
 		height: fit-content;
+		width: fit-content;
+	}
+
+	#profile {
+		flex: 1 1 0;
+		max-width: 25vw;
+		min-width: 20vw;
 	}
 
 	#info-text {
-		margin: 0 2vw auto 2vw;
-		font-size: 2.5vw;
+		width: calc(65px + 30vw);
+		font-size: 2vw;
+		margin-top: 2vw;
 		height: max-content;
 	}
 
-	#info-text p, #info-text h3 a {
-		padding: 0 4vw;
+	#education p, #grades {
+		font-size: 1.8vw;
+	}
+
+	.skill {
+		font-size: 2vw;
+		line-height: 1em;
+	}
+
+	#education h3 {
+		line-height: 1em;
 	}
 }
 
-@media screen and (max-width: 450px) {
-	#info-text h2, #info-text h3, #info-text h4 {
-		display: none;
-	}
-
-	#profile {
-		width: auto;
-		max-width: 55%;
-		min-height: fit-content;
-		margin: 2vw auto;
-	}
-
-	#info-content {
-		display: flex;
-		flex-direction: column;
-		height: calc(100% - 28vw);
-	}
-
+@media screen and (max-width: 510px) {
 	#info-content h2 {
 		font-size: 5vw;
-		margin: 1vw auto;
+		margin-bottom: 1vw;
 	}
 
-	#mobile-info {
-		display: flex;
-		flex-direction: column;
-		color:rgb(225, 222, 213);
-		margin: 0 auto;
-		text-align: center;
+	#info-content h4 {
+		margin: 1vw auto 4vw auto;
 	}
 
 	#info-text {
-		margin-top: 2vw;
-		font-size: 3vw;
-		height: fit-content;
+		font-size: 3.5vw;
+		margin-top: 0;
+		margin-bottom: auto;
 	}
 
-	#info-text p, #info-text h3 a {
-		padding: 0 4vw;
+	#education div {
+	grid-template-areas: "location date"
+						 "title ."
+						 "grades grades"
+						 "skillarea skillarea";
 	}
+
+	#education p, #grades {
+	font-size: 3.2vw;
+	}
+
+	#educ-skills {
+		padding: 2vw 0;
+	}
+
+	.skill {
+		font-size: 4vw;
+	}
+
 }
