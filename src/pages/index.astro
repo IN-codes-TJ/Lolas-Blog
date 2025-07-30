@@ -1,5 +1,5 @@
 ---
-import Navigation from '../components/Navigation.astro';
+import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Social from '../components/Social.astro';
 
@@ -95,7 +95,7 @@ education.forEach((experience) => {
 		<title>{pageTitle}</title>
 	</head>
 	<body>
-		<Navigation />
+		<Header />
 		<main>
 			<div id="landing">
 				<h1>{pageTitle}</h1>
@@ -151,5 +151,13 @@ education.forEach((experience) => {
 			</div>
 		</main>
 		<Footer />
+		<script>
+			//TO DO: rewrite code for layout of rest of page so it actually works
+			//and naturally never overflows (e.g. always having face and mini
+			//title on left side/at beginning)
+
+			import "../scripts/menu.js";
+			
+		</script>
 	</body>
 </html>

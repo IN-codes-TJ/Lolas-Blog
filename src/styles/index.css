@@ -1,3 +1,13 @@
+@media screen and (min-width: 511px) {
+	.navigation {
+		display: none;
+	}
+
+	header > nav {
+		margin: 4vh;
+	}
+}
+
 #landing {
 	display: block;
 	width: 80vw;
@@ -215,7 +225,7 @@ footer a:visited {
 	}
 
 	#info-content h4 {
-		margin: 1vw auto 4vw auto;
+		margin: 1vw auto 2vw auto;
 	}
 
 	#info-text h2, #info-text h3:first-of-type, #info-text h4 {
@@ -234,7 +244,7 @@ footer a:visited {
 
 	#profile {
 		flex: 1 1 0;
-		max-width: 25vw;
+		max-width: 28vw;
 		min-width: 20vw;
 	}
 
@@ -270,7 +280,8 @@ footer a:visited {
 	}
 
 	#info-text {
-		font-size: 3.5vw;
+		width: calc(65px + 40vw);
+		font-size: 3.2vw;
 		margin-top: 0;
 		margin-bottom: auto;
 	}
