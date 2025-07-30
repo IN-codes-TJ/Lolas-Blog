@@ -1,19 +1,19 @@
 const nav = document.querySelector('header');
-const h1 = document.querySelector("h1");
+const landing = document.getElementById("landing");
 
-function setH1Distance() {
+function setLandingDistance() {
 	let height = window.getComputedStyle(nav).getPropertyValue("height").slice(0, -2);
-	let h1margin = window.getComputedStyle(h1).getPropertyValue("margin-bottom").slice(0, -2);
-	h1.style.marginTop = Number(h1margin) + Number(height) + "px";
+	let landingmargin = window.getComputedStyle(landing).getPropertyValue("margin-bottom").slice(0, -2);
+	landing.style.marginTop = Number(landingmargin) + Number(height) + "px";
 };
 
-setH1Distance();
+setLandingDistance();
 			
 window.addEventListener("resize", () => {
-	setH1Distance();
+	setLandingDistance();
 });
 
 document.querySelector('.hamburger')?.addEventListener('click', () => {
 	document.querySelector('.navigation')?.classList.toggle('visible');
-	setH1Distance();
+	setLandingDistance();
 });
