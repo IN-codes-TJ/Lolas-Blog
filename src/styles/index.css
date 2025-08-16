@@ -8,6 +8,22 @@
 	}
 }
 
+body {
+	padding: 0;
+}
+
+h1 {
+	text-align: center;
+	justify-content: center;
+}
+
+.navigation a {
+	margin: 0 auto;
+	text-decoration: none;
+	text-align: left;
+	font-size: 3.5vw;
+}
+
 #landing {
 	display: block;
 	width: 80vw;

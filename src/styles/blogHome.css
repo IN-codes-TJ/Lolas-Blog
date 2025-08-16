@@ -1,0 +1,22 @@
+h1 {
+    width: 60%;
+    margin: 0;
+}
+
+body > p {
+    width: 75%;
+    margin-bottom: 10%;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+.post {
+    min-height: 50px;
+    border: 5px solid black;
+    border-radius: 25px;
+    padding: 1.5vw 3vw;
+    list-style: none;
+}
