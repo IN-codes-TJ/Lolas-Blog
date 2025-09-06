@@ -6,14 +6,13 @@ import Social from '../components/Social.astro';
 import '../styles/global.css';
 import '../styles/index.css';
 
-const pageTitle = "MEET LOLA";
-
-const profileImg = "/assets/blog_profile.png";
+const pageTitle = "Hello!";
 
 const identity = {
 	country: "England",
 	city: "Norwich",
-	occupation: "Student"
+	occupation: "Computer Science Student",
+	occupation_company: "the University of East Anglia"
 };
 
 function getTodaysDate() {
@@ -103,34 +102,13 @@ education.forEach((experience) => {
 		<main>
 			<div id="landing">
 				<h1>{pageTitle}</h1>
-				
-				<div id="info-content">
-					<div>
-						<div id="profile">
-							<img src={profileImg} alt="Profile picture of Lola">
-						</div>
-						<div id="mobile-info">
-							<h2>LOLA-ROSE GOOCH</h2>
-							<h3>{identity.occupation}</h3>
-							<h4>{identity.city}, {identity.country}</h4>
-							{birthday === getTodaysDate() && <p>{getTodaysDate()}</p>}
-						</div>
-						<Social />
-					</div>
-					<div id="info-text">
-						<h2>LOLA-ROSE GOOCH</h2>
-						<h3>{identity.occupation}</h3>
-						<h4>{identity.city}, {identity.country}</h4>
-						{birthday === getTodaysDate() && <p>{getTodaysDate()}</p>}
-					
-						<p>A highly organised, committed, adaptable {identity.occupation} who strives to achieve her best and improve while she does it. Undergoing an integrated masters in Computing Sciences until 2028.</p>
-
-						<h3><a href="blog">MY BLOG</a></h3>
-						<p>Interested in what I'm getting up to? Consider checking out my blog! I write about some of the things I'm working on, how I did it, and other things I have discovered.</p>
-					</div>
-				</div>
+				<p><i>~</i> I'm Lola, a passionate {identity.occupation} at {identity.occupation_company}. <i>~</i></p>
+				<p>I created this blog as a way of documenting my progress as the years go on. I will be posting a few snippets of things I have made, learned and more! I hope you enjoy reading it as much as I will enjoy making it :)</p>
+				{birthday === getTodaysDate() && <p>It's Lola's birthday today! {getTodaysDate()}</p>}
+				<Social />
 			</div>
 			<div class="triangle-up"></div>
+			<div id="space"></div>
 			<div id="content">
 				<h2>MY SKILLS</h2>
 				<ul id="skills">

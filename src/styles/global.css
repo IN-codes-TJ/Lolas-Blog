@@ -1,21 +1,16 @@
 body {
-	background: rgb(225, 222, 213);	
+	background: rgb(7, 10, 7);	
 	font-family: Georgia, 'Times New Roman', Times, serif;
 	line-height: 1.5em;
 	font-size: 1.3vw;
-	color: rgb(4, 7, 4);
+	color: rgb(225, 222, 213);
 	margin: 0;
 	padding: 4vw;
 	overflow-x: hidden;
 }
 
-/* Go over this
-* {
-	box-sizing: border-box;
-}
-*/
-
 header {
+	z-index: 2;
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -24,8 +19,6 @@ header {
 header > nav {
 	display: flex;
 	flex-direction: row;
-	margin: 0;
-	justify-content: left;
 }
 
 .navigation {
@@ -34,34 +27,38 @@ header > nav {
 	margin: auto;
 	font-size: 2vw;
 	width: 100%;
-	margin: 0 0 0 -2vw;
 	padding: 2vw;
 	padding-top: 4vw;
-	background-color:rgb(225, 222, 213, 0.9);
+	justify-content: space-evenly;
+	background-color:rgb(7, 10, 7, 0.9);
 }
 
 .navigation a {
-	margin: 0 10% 0 0;
 	text-decoration: none;
-	text-align: left;
+	text-align: center;
 	font-size: 1.5vw;
+	width: 33%;
 }
 
 .hamburger {
-	cursor: pointer;
 	display: none;
+	cursor: pointer;
+	padding: 2vw;
+	padding-top: 4vw;
+	margin: auto;
+	margin-left: 0;
 }
 
 .hamburger .line {
 	display: block;
-	width: 8vw;
-	height: 1vw;
+	width: 30px;
+	height: 5px;
 	border-radius: 0.5vw;
 	background-color: rgb(7, 10, 7);
 }
 
 .hamburger .line:first-of-type {
-	margin-bottom: 1.5vw;
+	margin-bottom: 5px;
 }
 
 
@@ -93,8 +90,8 @@ h4 {
 	line-height: 0.1em;
 }
 
-a:visited, a {
-	color: black;
+a:visited, a, p, h1, h2, h3, h4 {
+	color: rgb(225, 222, 213);
 }
 
 /* Footer */
