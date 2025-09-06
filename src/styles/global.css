@@ -65,8 +65,7 @@ header > nav {
 /* Titles and other texts */
 
 h1 {
-	display: flex;
-	flex-wrap: wrap;
+	display: block;
 	font-size: 8vw;
 	text-align: left;
 	font-family: 'Times New Roman', serif;
@@ -92,6 +91,10 @@ h4 {
 
 a:visited, a, p, h1, h2, h3, h4 {
 	color: rgb(225, 222, 213);
+}
+
+i {
+	color: rgb(125, 189, 125);
 }
 
 /* Footer */

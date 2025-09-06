@@ -32,7 +32,7 @@ h1 {
 	position: relative;
 	border-left: 50vw solid transparent;
 	border-right: 50vw solid transparent;
-	border-bottom: 8vw solid rgb(32, 40, 32);
+	border-bottom: 8vw solid rgb(30, 50, 30);
 	transform: translateY(2px);
 	margin-top: 100vh;
 }
@@ -48,7 +48,7 @@ h1 {
 #space {
 	position: relative;
 	height: 5vw;
-	background-image: linear-gradient(rgb(32, 40, 32), rgb(7, 10, 7));
+	background-image: linear-gradient(rgb(30, 50, 30), rgb(7, 10, 7));
 	margin: 0;
 	padding: 0;
 }
@@ -71,9 +71,9 @@ main > h2 {
 	padding: 0.5vw 1vw;
 	margin: 0 2vw 2vw 0;
 	text-align: center;
-	background-color: rgb(32, 63, 32, 0.4);
-	color: rgb(78, 132, 78);
-	border: 0.15vw solid rgb(32, 63, 32);
+	background-color: rgba(68, 95, 68, 0.4);
+	color: rgb(125, 189, 125);
+	border: 0.15vw solid rgb(62, 85, 62);
 	border-radius: 0.5vw;
 	font-size: 1.5vw;
 }
