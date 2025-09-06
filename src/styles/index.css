@@ -5,20 +5,38 @@ body {
 h1 {
 	text-align: center;
 	justify-content: center;
+	margin: auto;
 	margin-bottom: 1vh;
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
 }
 
 #landing {
 	display: block;
+	word-wrap: break-word;
+	width: 60%;
 	margin: auto;
 	z-index: 0;
 	position: fixed;
 	height: 100vh;
 	color: black;
 	top: 0;
-	padding: 0 15%;
+	padding: 0 20%;
 	text-align: center;
 	align-content: center;
+}
+
+#landing p:first-of-type {
+	font-style: italic;
+	margin: 0;
+	opacity: 0;
+	transition: opacity 2s;
+}
+
+#info-para {
+	opacity: 0;
+	transition: opacity 2s;
 }
 	
 #socials {
@@ -162,45 +180,6 @@ footer a:visited {
 }
 
 @media screen and (max-width: 900px) {
-	#info-content {
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: center;
-		align-content: center;
-		overflow: hidden;
-	}
-
-	#info-content h4 {
-		margin: 1vw auto 2vw auto;
-	}
-
-	#info-text h2, #info-text h3:first-of-type, #info-text h4 {
-		display: none;
-	}
-
-	#mobile-info {
-		display: flex;
-		flex-direction: column;
-		color:rgb(225, 222, 213);
-		margin: 0 auto;
-		text-align: center;
-		height: fit-content;
-		width: fit-content;
-	}
-
-	#profile {
-		flex: 1 1 0;
-		max-width: 28vw;
-		min-width: 20vw;
-	}
-
-	#info-text {
-		width: calc(65px + 30vw);
-		font-size: 2vw;
-		margin-top: 2vw;
-		height: max-content;
-	}
-
 	#education p, #grades {
 		font-size: 1.8vw;
 	}
@@ -216,22 +195,6 @@ footer a:visited {
 }
 
 @media screen and (max-width: 510px) {
-	#info-content h2 {
-		font-size: 5vw;
-		margin-bottom: 1vw;
-	}
-
-	#info-content h4 {
-		margin: 1vw auto 4vw auto;
-	}
-
-	#info-text {
-		width: calc(65px + 40vw);
-		font-size: 3.2vw;
-		margin-top: 0;
-		margin-bottom: auto;
-	}
-
 	#education div {
 	grid-template-areas: "location date"
 						 "title ."
