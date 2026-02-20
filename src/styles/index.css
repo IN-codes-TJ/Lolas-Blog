@@ -93,7 +93,7 @@ main > h2 {
 	color: rgb(125, 189, 125);
 	border: 0.15vw solid rgb(62, 85, 62);
 	border-radius: 0.5vw;
-	font-size: 1.5vw;
+	font-size: max(14px, 1.5vw);
 }
 
 #education {
@@ -137,14 +137,14 @@ main > h2 {
 }
 
 #education p, #grades {
-	font-size: 1vw;
+	font-size: max(14px, 1vw);
 }
 
 #education p {
 	padding: 0;
 	margin: auto;
 	margin-right: 0;
-	font-size: 0.8vw;
+	font-size: max(14px, 0.8vw);
 	width: fit-content;
 	grid-area: date;
 }
@@ -180,15 +180,6 @@ footer a:visited {
 }
 
 @media screen and (max-width: 900px) {
-	#education p, #grades {
-		font-size: 1.8vw;
-	}
-
-	.skill {
-		font-size: 2vw;
-		line-height: 1em;
-	}
-
 	#education h3 {
 		line-height: 1em;
 	}
@@ -202,16 +193,7 @@ footer a:visited {
 						 "skillarea skillarea";
 	}
 
-	#education p, #grades {
-	font-size: 3.2vw;
-	}
-
 	#educ-skills {
 		padding: 2vw 0;
 	}
-
-	.skill {
-		font-size: 4vw;
-	}
-
 }

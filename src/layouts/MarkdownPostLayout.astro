@@ -1,0 +1,36 @@
+---
+// Use this for blog post layouts
+const { frontmatter } = Astro.props;
+
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/blogPost.css';
+import '../styles/global.css';
+
+const months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
+
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{ frontmatter.title }</title>
+	</head>
+	<body>
+		<Header />
+        <div id = title>
+            <h1>{ frontmatter.title }<i>&nbsp;~</i></h1>
+            <p>Updated on { months[parseInt(frontmatter.pubDate.slice(3,5))-1] } { frontmatter.pubDate.slice(0,2) }, { frontmatter.pubDate.slice(6,10) } by { frontmatter.author }</p>
+            <p>{ frontmatter.readTime } min read</p>
+        </div>
+        <hr>
+        <slot />
+		<Footer />
+		<script>
+			import "../scripts/menu.js";
+		</script>
+    </body>
+</html>

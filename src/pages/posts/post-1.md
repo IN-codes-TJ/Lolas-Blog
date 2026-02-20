@@ -1,23 +1,15 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: 'My First Post!'
 pubDate: 05/07/2025
-description: 'This is the first of many blog posts that I am making, and is featured in my blog "Everything I did to make my own blog!"'
-author: 'Lola-Rose Gooch'
+description: 'This is the first of many blog posts that I am making!'
+author: 'Lola'
+readTime: 5
 tags: ["astro", "blog", "blogging", "first", "learning in public"]
 ---
 
-# Lola-Rose's First Blog Post
+Hello to everyone reading this. Welcome to my first blog post! I thought it would be useful for you to have a live blog example (as that's what we are making after all), so here it is! To make this post a little bit more interesting than just a first post, I'll use this as an opportunity to tell you about myself.
 
-Published on: 05/07/2025
-
-Hello to everyone reading this. Welcome to my first blog post! This is just a little post created for use in my upcoming blog: 
-> Everything I did to make my own blog!
-
-I thought it would be useful for you to have a live blog example (as that's what we are making after all), so here it is!
-
-To make this post a little bit more interesting than just a first post, I'll use this as an opportunity to tell you about myself.
-
-## About Me
 ### An Introduction
 My name is Lola-Rose Gooch and I am a curious, motivated individual currently undergoing my Computer Science degree. 
 

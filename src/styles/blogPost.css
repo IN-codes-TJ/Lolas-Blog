@@ -1,0 +1,22 @@
+h1 {
+    margin: 0;
+}
+
+#title p {
+    margin: 5px;
+}
+
+hr {
+    border-color: rgb(58, 89, 58);
+    margin-bottom: 5%;
+    border-width: 1px;
+}
+
+body > p {
+    margin-bottom: max(32px, 4vh);
+}
+
+body > h3 {
+    font-size: max(22px, 2.3vw);
+    margin-top: 10vh; 
+}
