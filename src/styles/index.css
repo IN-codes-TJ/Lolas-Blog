@@ -3,7 +3,7 @@ body {
 }
 
 h1 {
-	text-align: center;
+	text-align: center !important;
 	justify-content: center;
 	margin: auto;
 	margin-bottom: 1vh;
