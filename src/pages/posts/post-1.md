@@ -22,7 +22,7 @@ To make this post a little bit more interesting than just a first post, I'll use
 My name is Lola-Rose Gooch and I am a curious, motivated individual currently undergoing my Computer Science degree. 
 
 ### How it Started
-I began my course in September of 2025 after years of dabbling with tech. As a child of the 2000's, I was lucky to be born at a time when tech was readily available and very quickly improving. This meant that when I got my first device (this was an iPad), I had millions of resources at my very fingertips. 
+I began my course in September of 2024 after years of dabbling with tech. As a child of the 2000's, I was lucky to be born at a time when tech was readily available and very quickly improving. This meant that when I got my first device (this was an iPad), I had millions of resources at my very fingertips. 
 
 Unfortunately, my first move as a budding tech-lover was not to research the world of tech and become the world's youngest tech genius. Instead, I played games like Minecraft and Roblox. It wasn't until my fifth year of Primary School that I began to properly learn about the world of tech. 
 
