@@ -100,6 +100,7 @@ main > h2 {
 	display: flex;
 	flex-direction: column;
 	padding: 0;
+	margin: 0;
 }
 
 #education div {
@@ -111,7 +112,7 @@ main > h2 {
 	color: rgb(165, 172, 165);
 	border: 0.15vw solid rgb(25, 28, 25);
 	border-radius: 0.5vw;
-	margin: 2vw 0;
+	margin: 0 0 2vw 0;
 	padding: 1vw 2vw;
 	width: fit-content;
 	min-width: 45%;
@@ -121,19 +122,21 @@ main > h2 {
 #education h3 a {
 	color: rgb(225, 222, 213);
 	text-decoration: none;
+	padding-right:2vh;
 	grid-area: location;
 }
 
 #education h4 {
+	margin-top: 0;
 	grid-area: title;
 }
 
 #grades {
 	list-style: none;
-	grid-area: grades;
 	padding: 0.5vw 0;
 	margin-top: 1vw;
 	width: fit-content;
+	grid-area: grades;
 }
 
 #education p, #grades {

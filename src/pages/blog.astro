@@ -5,6 +5,12 @@ import '../styles/blogHome.css';
 import '../styles/global.css';
 
 const pageTitle = "Lola-Rose's Blog";
+
+// Dynamically adding posts to the blog home page, 
+// so the user can click it and view that post
+
+const myPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true}));
+
 ---
 
 <html lang="en">
@@ -17,11 +23,16 @@ const pageTitle = "Lola-Rose's Blog";
 	</head>
 	<body>
 		<Header />
-		<h1>{pageTitle}<i>&nbsp;~</i></h1>
-        <p>Welcome! I created this blog as a way of documenting my progress as the years go on. I will be posting a few snippets of things I have made, learned and more! I hope you enjoy reading it as much as I will enjoy making it :)</p>
-        <ul>
-            <li class="post"><a href="/posts/post-1">Post 1</a></li>
-        </ul>
+		<main>
+			<h1>{pageTitle}<i>&nbsp;~</i></h1>
+        	<p>Welcome! I created this blog as a way of documenting my progress as the years go on. I will be posting a few snippets of things I have made, learned and more! I hope you enjoy reading it as much as I will enjoy making it :)</p>
+        	<ul>
+				{myPosts.map( (post: any) => <li class="post">
+					<a href={ post.url }>{ post.frontmatter.title }</a>
+					<h4>{ post.frontmatter.description }</h4>
+				</li>)}
+			</ul>
+		</main>
 		<Footer />
 		<script>
 			import "../scripts/menu.js";

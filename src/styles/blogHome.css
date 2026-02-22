@@ -1,14 +1,18 @@
-h1 {
+main h1 {
     width: 60%;
     margin: 0;
 }
 
-body > p {
+body main {
+    padding: 4vw;
+}
+
+body main > p {
     width: 75%;
     margin-bottom: 10%;
 }
 
-ul {
+main ul {
     padding: 0;
     margin: 0;
 }
@@ -19,4 +23,9 @@ ul {
     border-radius: 25px;
     padding: 1.5vw 3vw;
     list-style: none;
+}
+
+.post h4 {
+    font-style: italic;
+    margin-top: 0;
 }

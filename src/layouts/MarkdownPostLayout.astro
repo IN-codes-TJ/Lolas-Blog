@@ -21,13 +21,15 @@ const months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept"
 	</head>
 	<body>
 		<Header />
-        <div id = title>
+		<main>
+			<div id = title>
             <h1>{ frontmatter.title }<i>&nbsp;~</i></h1>
             <p>Updated on { months[parseInt(frontmatter.pubDate.slice(3,5))-1] } { frontmatter.pubDate.slice(0,2) }, { frontmatter.pubDate.slice(6,10) } by { frontmatter.author }</p>
             <p>{ frontmatter.readTime } min read</p>
-        </div>
-        <hr>
-        <slot />
+        	</div>
+        	<hr>
+        	<slot />
+		</main>
 		<Footer />
 		<script>
 			import "../scripts/menu.js";

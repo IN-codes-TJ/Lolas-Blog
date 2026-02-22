@@ -1,3 +1,7 @@
+body main {
+    padding: 4vw;
+}
+
 h1 {
     margin: 0;
 }
@@ -12,11 +16,11 @@ hr {
     border-width: 1px;
 }
 
-body > p {
+body main > p {
     margin-bottom: max(32px, 4vh);
 }
 
-body > h3 {
+body main > h3 {
     font-size: max(22px, 2.3vw);
     margin-top: 10vh; 
 }
