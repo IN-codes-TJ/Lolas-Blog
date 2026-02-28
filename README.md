@@ -1,3 +1,10 @@
+# Description
+I am making this blog as a fun side-project alongside my degree. After a long hiatus, it is basically complete - save for adding more blog posts! 
+
+I decided to host this using netlify (for up to 40% reduced build time), using the astro framework (for up to 40% faster loading speeds). 
+
+Below is some information about Astro:
+
 # Astro Starter Kit: Minimal
 
 ```sh
