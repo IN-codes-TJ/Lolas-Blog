@@ -30,8 +30,9 @@ const education = [{
 						title:"Computing Sciences",
 						start: "2024",
 						end: "ongoing",
-						skills: ["C/C++", "Python", "HTML", "CSS", "JavaScript", "PostgreSQL", "Java", "Maths", "FPGA Design", "Analogue Electronics"],
-						grades: [[false, "Pending"]]
+						skills: ["C/C++", "Python", "Java", "HTML/CSS", "JavaScript", "PostgreSQL", "Maths", "FPGA Design", "Analogue Electronics", "DSA"],
+						grades: [["Y1", "86.80%"],
+								["Y2", "Pending"]]
 					},
 					{
 						location:"Thorpe St Andrew School & Sixth Form",
@@ -107,7 +108,7 @@ education.forEach((experience) => {
 			<div class="triangle-up"></div>
 			<div id="space"></div>
 			<div id="content">
-				<h2>MY SKILLS</h2>
+				<h2>MY TECH SKILLS</h2>
 				<ul id="skills">
 					{skills.map((skill) => <li class="skill">{skill}</li>)}
 				</ul>
