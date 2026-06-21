@@ -32,11 +32,3 @@ After the conference, I spent most of my time doing coursework and exams. I won'
 Like last summer, I have quite a few project ideas to be getting on with. For example, I would like to learn Flutter to create my own digital flashcard app, whose database is held on a homemade Oracle server. Maybe I will pick up some of my past projects to revamp and finish them. I will definitely make a start on my third year project (I have already done some research). But most importantly, I will use this time to rest my brain and prepare it for third year!
 
 As before, I hope that this post has been enjoyable. See you next time (whenever that may be)!
-
-
-
-### Something about how I am realising how poorly-made this blog is as I've learned so much more
-
-From custom alexa skills to my portfolio, I have so many things that I want to create. I plan to include some of them in my blog, as well as tutorials and tips made from what I learn along the way.
-
-I hope this post has been an enjoyable read. See you next time!
